@@ -7,7 +7,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
-import useMainStyle from "../../styles/MainStyles";
+import useMainStyle from "../styles/MainStyles";
 import {BugReport, History, Settings, Speed, SupervisorAccount, ExitToApp} from "@material-ui/icons";
 import {Link} from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import TopBar from "./components/top-bar/TopBar";
-import SideBar from "./components/side-bar/SideBar";
+import TopBar from "./components/TopBar";
+import SideBar from "./components/SideBar";
 import {BrowserRouter as Router} from "react-router-dom";
 import MainNavigation from "./routes/MainNavigation";
 import useMainStyle from "./styles/MainStyles";

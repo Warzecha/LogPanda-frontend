@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60a7ea62-7175-4cd2-8a37-b602aa5c63e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/metrics/MetricsComponentContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/metrics/MetricsComponentView.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/metrics/UptimeComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/numberUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/side-bar/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/top-bar/TopBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/MainNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/MainNavigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MetricsScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MetricsScreen.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +42,9 @@
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/screens" />
       <recent name="$PROJECT_DIR$/src/components/side-bar" />
@@ -77,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576329847938</updated>
-      <workItem from="1576329852435" duration="11389000" />
+      <workItem from="1576329852435" duration="16829000" />
     </task>
     <servers />
   </component>
@@ -89,9 +100,9 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2611" y="358" width="604" height="397" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/70.27.1850.1053@1920.0.1920.1080" timestamp="1576334306827" />
-    <state x="2579" y="252" key="run.anything.popup" timestamp="1576334497304">
+    <state x="2579" y="252" key="run.anything.popup" timestamp="1576353285617">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2579" y="252" key="run.anything.popup/1920.0.1920.1080/70.27.1850.1053@1920.0.1920.1080" timestamp="1576334497304" />
+    <state x="2579" y="252" key="run.anything.popup/1920.0.1920.1080/70.27.1850.1053@1920.0.1920.1080" timestamp="1576353285617" />
   </component>
 </project>
