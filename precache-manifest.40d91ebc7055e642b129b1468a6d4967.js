@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b0f6a829f9932b2f80e1707e723092f9",
+    "revision": "85b5e3d009a402e3ff593b9fee60c3c3",
     "url": "/log-panda-frontend/index.html"
   },
   {
-    "revision": "761c62ca5c1234428e1f",
+    "revision": "4068943a8b48db16652d",
     "url": "/log-panda-frontend/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/log-panda-frontend/static/js/2.0c45ca2b.chunk.js.LICENSE"
   },
   {
-    "revision": "761c62ca5c1234428e1f",
-    "url": "/log-panda-frontend/static/js/main.6c733d23.chunk.js"
+    "revision": "4068943a8b48db16652d",
+    "url": "/log-panda-frontend/static/js/main.25aee5d2.chunk.js"
   },
   {
     "revision": "0fc7ffd24c23dccbe6e2",
