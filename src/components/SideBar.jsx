@@ -76,7 +76,7 @@ export default function SideBar(props) {
             <div className={classes.toolbar}/>
             <List>
                 {
-                    menuItems.map((item, index) => <ListItemLink {...item}/>)
+                    menuItems.map((item, index) => <ListItemLink key={index} {...item}/>)
                 }
             </List>
             <Divider/>
