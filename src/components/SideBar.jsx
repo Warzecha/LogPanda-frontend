@@ -33,7 +33,7 @@ function ListItemLink(props) {
     );
 }
 
-export default function SideBar(props) {
+export default function SideBar() {
     const classes = useMainStyle();
 
 

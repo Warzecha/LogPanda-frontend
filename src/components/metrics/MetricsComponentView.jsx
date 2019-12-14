@@ -7,7 +7,7 @@ export default function MetricsComponentView(props) {
     return(
         <div>
             <UptimeComponent {...props}/>
-            <ThroughputComponent/>
+            <ThroughputComponent {...props.throughputMetrics}/>
 
         </div>
     )

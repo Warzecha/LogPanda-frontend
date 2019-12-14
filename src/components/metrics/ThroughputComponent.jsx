@@ -10,12 +10,9 @@ import {round} from "../../utils/numberUtils";
 
 
 
-export default function ThroughputComponent() {
-
+export default function ThroughputComponent(props) {
     const classes = useTileStyle();
-
-    const currentValue = 175945;
-    const relativeCapacity = 47.7;
+    const {currentValue, relativeCapacity} = props;
 
     return(
         <Card className={classes.card}>
