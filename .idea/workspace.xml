@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="60a7ea62-7175-4cd2-8a37-b602aa5c63e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/metrics/MetricsComponentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/MetricsComponentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/metrics/MetricsComponentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/MetricsComponentView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/metrics/ThroughputComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/ThroughputComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/MainStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MainStyles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -83,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576329847938</updated>
-      <workItem from="1576329852435" duration="21525000" />
+      <workItem from="1576329852435" duration="23534000" />
     </task>
     <servers />
   </component>
@@ -99,5 +101,9 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2579" y="252" key="run.anything.popup/1920.0.1920.1080/70.27.1850.1053@1920.0.1920.1080" timestamp="1576353285617" />
+    <state x="2578" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1576359312906">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2578" y="259" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/70.27.1850.1053@1920.0.1920.1080" timestamp="1576359312906" />
   </component>
 </project>

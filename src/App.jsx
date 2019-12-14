@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TopBar from "./components/TopBar";
 import SideBar from "./components/SideBar";
 import {BrowserRouter as Router} from "react-router-dom";
@@ -8,28 +8,26 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App() {
 
-    const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
+    const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
+
     const classes = useMainStyle();
 
     const handleDrawerButton = () => {
-        setIsDrawerOpen(!isDrawerOpen);
+        setIsMobileDrawerOpen(!isMobileDrawerOpen);
     };
 
-    const handleDrawerClose = () => {
-        setIsDrawerOpen(false);
-    };
 
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <TopBar onDrawerButton={handleDrawerButton}
-                    isDrawerOpen={isDrawerOpen}
+            <TopBar onDrawerToggle={handleDrawerButton}
+                    isDrawerOpen={isMobileDrawerOpen}
 
             />
 
             <Router basename={process.env.PUBLIC_URL}>
-                <SideBar isDrawerOpen={isDrawerOpen}
-                         onDrawerCloseButton={handleDrawerClose}
+                <SideBar isMobileDrawerOpen={isMobileDrawerOpen}
+                         onMobileDrawerClose={() => {setIsMobileDrawerOpen(false)}}
                 />
 
                 <MainNavigation/>
