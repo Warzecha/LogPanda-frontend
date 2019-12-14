@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60a7ea62-7175-4cd2-8a37-b602aa5c63e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/damian.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/side-bar/SideBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/top-bar/TopBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/MainNavigation.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/AdministrationScreen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/ErrorsScreen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/LogsScreen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/MetricsScreen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/SettingsScreen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/MainStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/MainNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/MainNavigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AdministrationScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AdminScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SettingsScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SettingsScreen.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576329847938</updated>
-      <workItem from="1576329852435" duration="9247000" />
+      <workItem from="1576329852435" duration="9592000" />
     </task>
     <servers />
   </component>

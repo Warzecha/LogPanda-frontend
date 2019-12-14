@@ -3,6 +3,6 @@ import React from "react";
 export default function ErrorsScreen() {
 
     return (<div>
-        Errors Screen
+        Settings Screen
     </div>)
 }
