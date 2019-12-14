@@ -19,7 +19,6 @@ function App() {
         setIsDrawerOpen(false);
     };
 
-
     return (
         <div className={classes.root}>
             <CssBaseline />
