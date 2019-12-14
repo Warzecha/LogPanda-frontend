@@ -4,7 +4,6 @@ import SideBar from "./components/side-bar/SideBar";
 import {BrowserRouter as Router} from "react-router-dom";
 import MainNavigation from "./routes/MainNavigation";
 import useMainStyle from "./styles/MainStyles";
-import clsx from "clsx";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App() {
@@ -29,7 +28,7 @@ function App() {
 
             />
 
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <SideBar isDrawerOpen={isDrawerOpen}
                          onDrawerCloseButton={handleDrawerClose}
                 />

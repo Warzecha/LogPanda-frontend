@@ -18,7 +18,7 @@ export default function MainNavigation() {
         <main className={classes.content}>
             <div className={classes.toolbar}/>
                 <Switch>
-                    <Route path="/metrics">
+                    <Route path="metrics">
                         <MetricsScreen/>
                     </Route>
                     <Route path="/logs">
