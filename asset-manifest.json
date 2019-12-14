@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/log-panda-frontend/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/log-panda-frontend/static/js/main.0c5d9b47.chunk.js",
-    "main.js.map": "/log-panda-frontend/static/js/main.0c5d9b47.chunk.js.map",
+    "main.js": "/log-panda-frontend/static/js/main.f0a595ff.chunk.js",
+    "main.js.map": "/log-panda-frontend/static/js/main.f0a595ff.chunk.js.map",
     "runtime-main.js": "/log-panda-frontend/static/js/runtime-main.5d2c515c.js",
     "runtime-main.js.map": "/log-panda-frontend/static/js/runtime-main.5d2c515c.js.map",
-    "static/js/2.a41926f4.chunk.js": "/log-panda-frontend/static/js/2.a41926f4.chunk.js",
-    "static/js/2.a41926f4.chunk.js.map": "/log-panda-frontend/static/js/2.a41926f4.chunk.js.map",
+    "static/js/2.ef5eb187.chunk.js": "/log-panda-frontend/static/js/2.ef5eb187.chunk.js",
+    "static/js/2.ef5eb187.chunk.js.map": "/log-panda-frontend/static/js/2.ef5eb187.chunk.js.map",
     "index.html": "/log-panda-frontend/index.html",
-    "precache-manifest.6a7eb02dcba4be83f5c244686c436030.js": "/log-panda-frontend/precache-manifest.6a7eb02dcba4be83f5c244686c436030.js",
+    "precache-manifest.00f9900b1b6cdc115a12971f88d65baa.js": "/log-panda-frontend/precache-manifest.00f9900b1b6cdc115a12971f88d65baa.js",
     "service-worker.js": "/log-panda-frontend/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/log-panda-frontend/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.a41926f4.chunk.js.LICENSE": "/log-panda-frontend/static/js/2.a41926f4.chunk.js.LICENSE"
+    "static/js/2.ef5eb187.chunk.js.LICENSE": "/log-panda-frontend/static/js/2.ef5eb187.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.5d2c515c.js",
-    "static/js/2.a41926f4.chunk.js",
+    "static/js/2.ef5eb187.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.0c5d9b47.chunk.js"
+    "static/js/main.f0a595ff.chunk.js"
   ]
 }
