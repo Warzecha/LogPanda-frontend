@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import MetricsComponentView from "./MetricsComponentView";
 
-
 export default function MetricsComponentContainer() {
 
     const [uptime, setUptime] = useState(98.97);
@@ -9,13 +8,11 @@ export default function MetricsComponentContainer() {
     const [serverErrors, setServerErrors] = useState(30.2);
     const [throughputMetrics, setThroughputMetrics] = useState(defaultThroughputMetrics);
 
-
     return (
         <MetricsComponentView uptime={uptime}
                               errorRate={errorRate}
                               serverErrors={serverErrors}
                               throughputMetrics={throughputMetrics}
-
         />
     )
 
