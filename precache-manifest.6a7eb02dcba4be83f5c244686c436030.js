@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "85b5e3d009a402e3ff593b9fee60c3c3",
+    "revision": "d161431aee1ce785810e5f0cc820fd1e",
     "url": "/log-panda-frontend/index.html"
   },
   {
-    "revision": "4068943a8b48db16652d",
+    "revision": "dc5e380ffaa496cfdf42",
     "url": "/log-panda-frontend/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "dc8388d42e38a321e48d",
-    "url": "/log-panda-frontend/static/js/2.0c45ca2b.chunk.js"
+    "revision": "a73e7e5f05b0b60cc516",
+    "url": "/log-panda-frontend/static/js/2.a41926f4.chunk.js"
   },
   {
     "revision": "b51e62edbcf7a9c4f4ad13f506021d3e",
-    "url": "/log-panda-frontend/static/js/2.0c45ca2b.chunk.js.LICENSE"
+    "url": "/log-panda-frontend/static/js/2.a41926f4.chunk.js.LICENSE"
   },
   {
-    "revision": "4068943a8b48db16652d",
-    "url": "/log-panda-frontend/static/js/main.25aee5d2.chunk.js"
+    "revision": "dc5e380ffaa496cfdf42",
+    "url": "/log-panda-frontend/static/js/main.0c5d9b47.chunk.js"
   },
   {
     "revision": "0fc7ffd24c23dccbe6e2",
