@@ -20,17 +20,14 @@ const useStyles = makeStyles({
 });
 
 export default function UptimeComponent(props) {
-
     const classes = useStyles();
 
-    let {uptime, errorRate, serverErrors} = props;
-
+    const {uptime, errorRate, serverErrors} = props;
     const roundUptime = round(uptime, 2);
     const roundErrorRate = round(errorRate, 2);
     const roundServerErrors = round(serverErrors, 2);
 
     const last24h = calculateTimePeriodInLast24hr(uptime);
-
 
     return(
         <Card className={classes.card}>
@@ -75,9 +72,7 @@ export default function UptimeComponent(props) {
     )
 }
 
-
 const calculateTimePeriodInLast24hr = (uptime) => {
-
     let totalSeconds = 24 * 60 * 60 * (100 - uptime) / 100;
 
     let hours   = Math.floor(totalSeconds / 3600);
@@ -89,8 +84,6 @@ const calculateTimePeriodInLast24hr = (uptime) => {
     seconds = formatTime(seconds, 's');
 
     return hours + ' ' + minutes + ' ' + seconds;
-
-
 };
 
 const formatTime = (value, appendix) => ((value || '') && (value + appendix));
