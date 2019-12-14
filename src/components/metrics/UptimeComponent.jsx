@@ -1,26 +1,16 @@
 import React from "react";
 import Card from "@material-ui/core/Card";
-import { makeStyles } from '@material-ui/core/styles';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {round} from "../../utils/numberUtils";
+import useTileStyle from "../../styles/TileStyles";
 
-const useStyles = makeStyles({
-    card: {
-        minWidth: 275,
-    },
-    title: {
-        fontSize: 16,
-    },
-    pos: {
-        marginTop: 12,
-    },
-});
+
 
 export default function UptimeComponent(props) {
-    const classes = useStyles();
+    const classes = useTileStyle();
 
     const {uptime, errorRate, serverErrors} = props;
     const roundUptime = round(uptime, 2);
@@ -32,7 +22,7 @@ export default function UptimeComponent(props) {
     return(
         <Card className={classes.card}>
             <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
+                <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
                     Uptime
                 </Typography>
                 <Typography variant="h5" component="h2">
@@ -45,7 +35,7 @@ export default function UptimeComponent(props) {
                 </Typography>
 
 
-                <Typography className={classes.pos} color="textSecondary">
+                <Typography className={classes.sectionTitle} color="textSecondary">
                     Error rate
                 </Typography>
                 <Typography variant="h5" component="h2">
@@ -54,7 +44,7 @@ export default function UptimeComponent(props) {
 
 
 
-                <Typography className={classes.pos} color="textSecondary">
+                <Typography className={classes.sectionTitle} color="textSecondary">
                     of which
                 </Typography>
                 <Typography variant="h5" component="h2">
