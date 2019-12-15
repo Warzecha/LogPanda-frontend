@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60a7ea62-7175-4cd2-8a37-b602aa5c63e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/metrics/MainMetricsFilterPanel.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/chartUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/metrics/MainMetricsChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/MainMetricsChart.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/metrics/MainMetricsComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/MainMetricsComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/metrics/MainMetricsFilterPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/MainMetricsFilterPanel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/metrics/ThroughputChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/ThroughputChart.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/TileStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/TileStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -2,7 +2,8 @@ import React from "react";
 import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import moment from "moment";
 import {makeStyles} from "@material-ui/core/styles";
-import {randomInRange, round} from "../../utils/numberUtils";
+import {round} from "../../utils/numberUtils";
+import {generateRandomData} from "../../utils/chartUtils";
 
 
 export default function MainMetricsChart() {
@@ -18,7 +19,7 @@ export default function MainMetricsChart() {
     const tooltipLabelFormatter = (timestamp) => moment(timestamp).format('HH:mm');
 
     return (
-        <ResponsiveContainer width={'100%'} height={500} className={classes.container}>
+        <ResponsiveContainer width={'90%'} height={500} className={classes.container}>
             <LineChart
                 data={data}
                 margin={{top: 5, right: 0, left: 0, bottom: 5}}
@@ -53,18 +54,4 @@ const useStyle = makeStyles(() => ({
 }));
 
 
-const generateRandomData = () => {
-    const time = moment().startOf('date');
-    const data = [];
-    for (let i = 0; i < 23; i++) {
-        time.add(1, 'h');
-        let value = randomInRange(0, 100);
 
-        data.push({
-            timestamp: time.valueOf(),
-            value: value
-        })
-    }
-
-    return data;
-};

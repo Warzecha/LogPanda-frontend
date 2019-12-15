@@ -2,7 +2,8 @@ import React from "react";
 import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import moment from "moment";
 import {makeStyles} from "@material-ui/core/styles";
-import {randomInRange, round} from "../../utils/numberUtils";
+import {round} from "../../utils/numberUtils";
+import {generateRandomData} from "../../utils/chartUtils";
 
 
 export default function ThroughputChart() {
@@ -51,20 +52,3 @@ const useStyle = makeStyles(() => ({
         marginTop: 20,
     },
 }));
-
-
-const generateRandomData = () => {
-    const time = moment().startOf('date');
-    const data = [];
-    for (let i = 0; i < 23; i++) {
-        time.add(1, 'h');
-        let value = randomInRange(0, 100);
-
-        data.push({
-            timestamp: time.valueOf(),
-            value: value
-        })
-    }
-
-    return data;
-};

@@ -17,6 +17,26 @@ export default function MainMetricsComponent(props) {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
 
+    const [percentiles, setPercentiles] = useState(initialPercentiles);
+
+
+    const handleChangePercentile = index => {
+
+        console.log('index', index);
+
+        const newPercentiles = percentiles.map((item, j) => {
+            if (j === index) {
+                const changed = {...item};
+                changed.selected = !item.selected;
+                return changed
+            } else {
+                return item
+            }
+        });
+        setPercentiles(newPercentiles)
+    };
+
+
     return (
         <Card className={classes.card}>
             <MainMetricsChart/>
@@ -46,6 +66,8 @@ export default function MainMetricsComponent(props) {
                         endDate={endDate}
                         onStartDateChange={dateTime => setStartDate(dateTime)}
                         onEndDateChange={dateTime => setEndDate(dateTime)}
+                        percentiles={percentiles}
+                        onChangePercentile={handleChangePercentile}
 
                     />
                 </Grid>
@@ -95,3 +117,28 @@ const metricsMenuItems = [
         value: 'errors'
     },
 ];
+
+
+const initialPercentiles = [
+    {
+        label: 'Average',
+        value: 50,
+        selected: true
+    },
+    {
+        label: '90%',
+        value: 90,
+        selected: true
+    },
+    {
+        label: '95%',
+        value: 95,
+        selected: true
+    },
+    {
+        label: '99%',
+        value: 99,
+        selected: false
+    }
+
+]
