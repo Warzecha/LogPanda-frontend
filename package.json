@@ -4,8 +4,10 @@
   "private": true,
   "homepage": "https://warzecha.github.io/log-panda-frontend/",
   "dependencies": {
+    "@date-io/moment": "^1.3.13",
     "@material-ui/core": "^4.7.2",
     "@material-ui/icons": "^4.5.1",
+    "@material-ui/pickers": "^3.2.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",

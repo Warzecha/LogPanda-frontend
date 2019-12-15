@@ -1,9 +1,12 @@
 import React, {useState} from "react";
-import Paper from "@material-ui/core/Paper";
 import useTileStyle from "../../styles/TileStyles";
 import MainMetricsChart from "./MainMetricsChart";
 import Grid from '@material-ui/core/Grid';
 import OutlinedSelectComponent from "./OutlinedSelectComponent";
+import MainMetricsFilterPanel from "./MainMetricsFilterPanel";
+import Button from "@material-ui/core/Button";
+import CardActions from "@material-ui/core/CardActions";
+import Card from "@material-ui/core/Card";
 
 export default function MainMetricsComponent(props) {
     const classes = useTileStyle();
@@ -11,8 +14,11 @@ export default function MainMetricsComponent(props) {
     const [metricName, setMetricName] = useState('');
     const [sourceApp, setSourceApp] = useState('');
 
+    const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(new Date());
+
     return (
-        <Paper className={classes.card}>
+        <Card className={classes.card}>
             <MainMetricsChart/>
 
             <Grid container spacing={3}>
@@ -33,9 +39,26 @@ export default function MainMetricsComponent(props) {
 
                     />
                 </Grid>
+
+                <Grid item xs={12}>
+                    <MainMetricsFilterPanel
+                        startDate={startDate}
+                        endDate={endDate}
+                        onStartDateChange={dateTime => setStartDate(dateTime)}
+                        onEndDateChange={dateTime => setEndDate(dateTime)}
+
+                    />
+                </Grid>
             </Grid>
 
-        </Paper>
+            <CardActions>
+                <Button size="small">Cancel</Button>
+                <Button size="small" color="primary">Apply</Button>
+            </CardActions>
+
+
+
+        </Card>
     )
 }
 
