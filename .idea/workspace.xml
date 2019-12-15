@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60a7ea62-7175-4cd2-8a37-b602aa5c63e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/metrics/ThroughputChart.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/metrics/ThroughputComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/ThroughputComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/numberUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/numberUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/metrics/MetricsComponentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/MetricsComponentView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/TileStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/TileStyles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +96,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2611" y="358" width="604" height="397" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/70.27.1850.1053@1920.0.1920.1080" timestamp="1576334306827" />
+    <state x="2560" y="289" width="710" height="528" key="find.popup" timestamp="1576403432560">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2560" y="289" width="710" height="528" key="find.popup/1920.0.1920.1080/70.27.1850.1053@1920.0.1920.1080" timestamp="1576403432560" />
     <state x="2579" y="252" key="run.anything.popup" timestamp="1576364340299">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

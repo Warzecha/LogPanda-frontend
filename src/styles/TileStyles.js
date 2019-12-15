@@ -1,9 +1,12 @@
 import {makeStyles} from "@material-ui/core/styles";
 
-const useTileStyle = makeStyles({
+const useTileStyle = makeStyles(theme => ({
+    root: {
+        flexGrow: 1,
+    },
     card: {
-        minWidth: 275,
-        margin: 10
+        margin: 10,
+        padding: theme.spacing(2),
     },
     cardTitle: {
         fontSize: 18,
@@ -18,7 +21,7 @@ const useTileStyle = makeStyles({
     appendix: {
         marginLeft: 10
     }
-});
+}));
 
 
 export default useTileStyle;

@@ -6,11 +6,13 @@ import Typography from '@material-ui/core/Typography';
 import useMainStyle from "../styles/MainStyles";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from '@material-ui/icons/Menu';
-import {useMediaQuery} from "@material-ui/core";
+import {useMediaQuery, useTheme} from "@material-ui/core";
 
 export default function TopBar(props) {
     const classes = useMainStyle();
-    const isSmallDevice = useMediaQuery('(max-width:600px)');
+
+    const theme = useTheme();
+    const isSmallDevice = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <AppBar position="fixed" className={classes.appBar}>
