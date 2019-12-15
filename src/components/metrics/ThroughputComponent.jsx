@@ -1,5 +1,4 @@
 import React from "react";
-import {makeStyles} from "@material-ui/core/styles";
 import useTileStyle from "../../styles/TileStyles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -70,4 +69,4 @@ const formatThroughput = (value) => {
         const millions = value / 1000000;
         return round(millions, 3) + 'M'
     }
-}
+};
