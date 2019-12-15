@@ -6,7 +6,7 @@ import {round} from "../../utils/numberUtils";
 import {generateRandomData} from "../../utils/chartUtils";
 
 
-export default function ThroughputChart() {
+export default function MainMetricsChart() {
 
     const classes = useStyle();
 
@@ -19,7 +19,7 @@ export default function ThroughputChart() {
     const tooltipLabelFormatter = (timestamp) => moment(timestamp).format('HH:mm');
 
     return (
-        <ResponsiveContainer width={300} height={200} className={classes.container}>
+        <ResponsiveContainer width={'90%'} height={500} className={classes.container}>
             <LineChart
                 data={data}
                 margin={{top: 5, right: 0, left: 0, bottom: 5}}
@@ -52,3 +52,6 @@ const useStyle = makeStyles(() => ({
         marginTop: 20,
     },
 }));
+
+
+

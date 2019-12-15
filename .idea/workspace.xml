@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60a7ea62-7175-4cd2-8a37-b602aa5c63e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/chartUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/metrics/MetricsComponentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/MetricsComponentView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/metrics/MainMetricsChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/MainMetricsChart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/metrics/MainMetricsComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/MainMetricsComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/metrics/MainMetricsFilterPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/MainMetricsFilterPanel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/metrics/ThroughputChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/metrics/ThroughputChart.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/TileStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/TileStyles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,10 +102,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2560" y="289" width="710" height="528" key="find.popup/1920.0.1920.1080/70.27.1850.1053@1920.0.1920.1080" timestamp="1576403432560" />
-    <state x="2579" y="252" key="run.anything.popup" timestamp="1576364340299">
+    <state x="2579" y="252" key="run.anything.popup" timestamp="1576418216665">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2579" y="252" key="run.anything.popup/1920.0.1920.1080/70.27.1850.1053@1920.0.1920.1080" timestamp="1576364340299" />
+    <state x="2579" y="252" key="run.anything.popup/1920.0.1920.1080/70.27.1850.1053@1920.0.1920.1080" timestamp="1576418216665" />
     <state x="2578" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1576359312906">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
