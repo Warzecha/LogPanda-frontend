@@ -4,26 +4,47 @@ import ThroughputComponent from "./ThroughputComponent";
 import MainMetricsComponent from "./MainMetricsComponent";
 import useTileStyle from "../../styles/TileStyles";
 import Grid from "@material-ui/core/Grid";
+import {useMediaQuery, useTheme} from "@material-ui/core";
 
 export default function MetricsComponentView(props) {
 
     const classes = useTileStyle();
+    const theme = useTheme();
+    const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
+
+    const largeScreenLayout = (
+        <Grid container spacing={3}>
+
+            <Grid item xs={12} md={8}>
+                <MainMetricsComponent/>
+            </Grid>
+            <Grid item xs={12} md={4}>
+                <UptimeComponent {...props}/>
+                <ThroughputComponent {...props.throughputMetrics}/>
+            </Grid>
+        </Grid>
+    );
+
+    const smallScreenLayout = (
+        <Grid container spacing={3}>
+
+            <Grid item xs={12} md={6}>
+                <UptimeComponent {...props}/>
+            </Grid>
+            <Grid item xs={12} md={6}>
+                <ThroughputComponent {...props.throughputMetrics}/>
+            </Grid>
+            <Grid item xs={12}>
+                <MainMetricsComponent/>
+            </Grid>
+
+        </Grid>
+    )
+
 
     return(
         <div className={classes.root}>
-
-            <Grid container spacing={3}>
-
-                <Grid item xs={8}>
-                    <MainMetricsComponent/>
-                </Grid>
-                <Grid item xs={4}>
-                    <UptimeComponent {...props}/>
-                    <ThroughputComponent {...props.throughputMetrics}/>
-                </Grid>
-
-            </Grid>
-
+            {isLargeScreen ? largeScreenLayout : smallScreenLayout}
         </div>
     )
 

@@ -10,7 +10,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import useMainStyle from "../styles/MainStyles";
 import {BugReport, History, Settings, Speed, SupervisorAccount, ExitToApp} from "@material-ui/icons";
 import {Link} from "react-router-dom";
-import {useMediaQuery} from "@material-ui/core";
+import {useMediaQuery, useTheme} from "@material-ui/core";
 
 
 function ListItemLink(props) {
@@ -35,7 +35,8 @@ function ListItemLink(props) {
 
 export default function SideBar(props) {
     const classes = useMainStyle();
-    const isSmallDevice = useMediaQuery('(max-width:600px)');
+    const theme = useTheme();
+    const isSmallDevice = useMediaQuery(theme.breakpoints.down('md'));
 
     const drawerContent = (
         <div>

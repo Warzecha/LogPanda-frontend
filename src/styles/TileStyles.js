@@ -5,7 +5,6 @@ const useTileStyle = makeStyles(theme => ({
         flexGrow: 1,
     },
     card: {
-        minWidth: 275,
         margin: 10,
         padding: theme.spacing(2),
     },
