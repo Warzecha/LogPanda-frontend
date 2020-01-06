@@ -141,4 +141,5 @@ const initialPercentiles = [
         selected: false
     }
 
-]
+];
+

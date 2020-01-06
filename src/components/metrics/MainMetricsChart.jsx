@@ -7,9 +7,7 @@ import {generateRandomData} from "../../utils/chartUtils";
 
 
 export default function MainMetricsChart() {
-
     const classes = useStyle();
-
     const data = generateRandomData();
 
     const tooltipFormatter = (value) => {
