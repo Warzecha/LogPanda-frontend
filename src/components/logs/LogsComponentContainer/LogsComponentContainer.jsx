@@ -1,11 +1,12 @@
 import React from "react";
-import LogsComponentView from "./LogsComponentView";
-import {randomInRange} from "../../utils/numberUtils";
 
-export default function () {
-    const data = generateRandomLogs(10)
+import LogsComponentView from "../LogsComponentView";
+import {randomInRange} from "../../../utils/numberUtils";
+
+const LogsComponentContainer = () => {
+    const data = generateRandomLogs(10);
     return <LogsComponentView logs={data}/>
-}
+};
 
 const apps = [
     'User Management App',
@@ -47,3 +48,5 @@ const generateRandomLogs = (count) => {
 
     return randomLogs;
 };
+
+export default LogsComponentContainer;
