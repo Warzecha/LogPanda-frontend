@@ -9,7 +9,6 @@ const ThroughputChart = (props) => {
     const classes = useStyle();
 
     const {data} = props;
-    console.log(data)
 
     const tooltipFormatter = (value) => {
         return [round(value, 1) + '%', "Capacity"]

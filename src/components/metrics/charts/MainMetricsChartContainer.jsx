@@ -4,7 +4,7 @@ import ThroughputChartContainer from "./throughput/ThroughputChartContainer";
 import ErrorRateChartContainer from "./errorRate/ErrorRateChartContainer";
 
 
-export default function MainMetricsChartContainer(props) {
+const MainMetricsChartContainer = (props) => {
 
     switch (props.chartToShow) {
         case 'uptime':
@@ -19,7 +19,9 @@ export default function MainMetricsChartContainer(props) {
         default:
             return <div/>;
     }
-}
+};
+
+export default MainMetricsChartContainer;
 
 
 

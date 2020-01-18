@@ -1,8 +1,11 @@
 import React from "react";
 
-export default function ErrorsScreen() {
 
-    return (<div>
-        Settings Screen
-    </div>)
-}
+const SettingsScreen = () => {
+    return (
+        <div>
+            Settings Screen
+        </div>)
+};
+
+export default SettingsScreen;

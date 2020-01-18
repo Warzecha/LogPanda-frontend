@@ -16,7 +16,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import Grid from "@material-ui/core/Grid";
 
-export default function (props) {
+const MainMetricsFilterPanel = (props) => {
 
     const classes = useStyles();
 
@@ -34,7 +34,7 @@ export default function (props) {
                                   />}
                                   label={item.label}
         />)
-    })
+    });
 
 
     return (
@@ -93,7 +93,7 @@ export default function (props) {
             </ExpansionPanel>
         </div>
     );
-}
+};
 
 
 const useStyles = makeStyles(theme => ({
@@ -136,3 +136,6 @@ const useStyles = makeStyles(theme => ({
         },
     }
 }));
+
+export default MainMetricsFilterPanel;
+

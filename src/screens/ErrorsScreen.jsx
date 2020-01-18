@@ -1,8 +1,11 @@
 import React from "react";
 
-export default function ErrorsScreen() {
+const ErrorsScreen = () => {
 
-    return (<div>
-        Errors Screen
-    </div>)
-}
+    return (
+        <div>
+            Errors Screen
+        </div>)
+};
+
+export default ErrorsScreen;

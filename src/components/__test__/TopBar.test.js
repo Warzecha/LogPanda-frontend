@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import TopBar from "./TopBar";
+import TopBar from "../TopBar/TopBar.jsx";
 import '@testing-library/jest-dom/extend-expect';
 
 

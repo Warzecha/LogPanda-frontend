@@ -10,10 +10,6 @@ const ThroughputChartContainer = (props) => {
         setData(generateRandomThroughputData())
     }, []);
 
-    useEffect(() => {
-        console.log(data)
-    }, [data]);
-
     return <ThroughputChart data={data} style={props.style}/>
 };
 

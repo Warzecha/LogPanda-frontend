@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import useTileStyle from "../../styles/TileStyles";
 import MainMetricsChartContainer from "./charts/MainMetricsChartContainer";
 import Grid from '@material-ui/core/Grid';
@@ -9,7 +9,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Card from "@material-ui/core/Card";
 import {Map} from 'immutable'
 
-export default function MainMetricsComponent(props) {
+const MainMetricsComponent = (props) => {
     const classes = useTileStyle();
 
     const [metricName, setMetricName] = useState('errors');
@@ -23,7 +23,7 @@ export default function MainMetricsComponent(props) {
     const handleChangePercentile = value => {
         let modified = percentiles.get(value);
         modified.selected = !modified.selected;
-        setPercentiles(percentiles.set(value, {...modified} ))
+        setPercentiles(percentiles.set(value, {...modified}))
     };
 
     return (
@@ -70,7 +70,7 @@ export default function MainMetricsComponent(props) {
 
         </Card>
     )
-}
+};
 
 const sourceAppItems = [
     {
@@ -130,3 +130,4 @@ const initialPercentiles = {
     }
 };
 
+export default MainMetricsComponent;

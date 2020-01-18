@@ -18,6 +18,10 @@ const LatencyChart = (props) => {
 
     const tooltipLabelFormatter = (timestamp) => moment(timestamp).format('HH:mm');
 
+    const isPercentileSelected = (value) => {
+        const percentile = props.percentiles.get(value);
+        return percentile && percentile.selected
+    }
 
     return (
         <ResponsiveContainer width={'90%'} height={500} className={classes.container}>
@@ -37,13 +41,13 @@ const LatencyChart = (props) => {
                     labelFormatter={tooltipLabelFormatter}
                 />
                 <CartesianGrid stroke="#f5f5f5"/>
-                {props.percentiles.get('50').selected &&
+                {isPercentileSelected('50') &&
                 <Line type="monotone" dataKey={50} stroke="#3f51b5" dot={false} strokeWidth={3}/>}
-                {props.percentiles.get('90').selected &&
+                {isPercentileSelected('90') &&
                 <Line type="monotone" dataKey={90} stroke="#82ca9d" dot={false} strokeWidth={2}/>}
-                {props.percentiles.get('95').selected &&
+                {isPercentileSelected('95') &&
                 <Line type="monotone" dataKey={95} stroke="#82ca9d" dot={false} strokeWidth={1}/>}
-                {props.percentiles.get('99').selected &&
+                {isPercentileSelected('99') &&
                 <Line type="monotone" dataKey={99} stroke="#82ca9d" dot={false} strokeWidth={1}/>}
             </LineChart>
         </ResponsiveContainer>)
