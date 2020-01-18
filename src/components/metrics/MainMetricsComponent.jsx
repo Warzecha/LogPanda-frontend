@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import useTileStyle from "../../styles/TileStyles";
-import MainMetricsChart from "./MainMetricsChart";
+import MainMetricsChartContainer from "./charts/MainMetricsChartContainer";
 import Grid from '@material-ui/core/Grid';
 import OutlinedSelectComponent from "./OutlinedSelectComponent";
 import MainMetricsFilterPanel from "./MainMetricsFilterPanel";
@@ -11,7 +11,7 @@ import Card from "@material-ui/core/Card";
 export default function MainMetricsComponent(props) {
     const classes = useTileStyle();
 
-    const [metricName, setMetricName] = useState('');
+    const [metricName, setMetricName] = useState('latency');
     const [sourceApp, setSourceApp] = useState('');
 
     const [startDate, setStartDate] = useState(new Date());
@@ -39,7 +39,7 @@ export default function MainMetricsComponent(props) {
 
     return (
         <Card className={classes.card}>
-            <MainMetricsChart/>
+            <MainMetricsChartContainer chartToShow={metricName}/>
 
             <Grid container spacing={3}>
                 <Grid item xs={6}>

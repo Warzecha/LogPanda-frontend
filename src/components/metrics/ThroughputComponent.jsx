@@ -6,7 +6,8 @@ import Typography from "@material-ui/core/Typography";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import {round} from "../../utils/numberUtils";
-import ThroughputChart from "./ThroughputChart";
+import ThroughputChart from "./charts/throughput/ThroughputChart";
+import ThroughputChartContainer from "./charts/throughput/ThroughputChartContainer";
 
 
 
@@ -44,7 +45,7 @@ export default function ThroughputComponent(props) {
                 </div>
 
 
-                <ThroughputChart/>
+                <ThroughputChartContainer/>
 
             </CardContent>
             <CardActions>

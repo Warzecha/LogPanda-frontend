@@ -2,13 +2,12 @@ import React from "react";
 import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import moment from "moment";
 import {makeStyles} from "@material-ui/core/styles";
-import {round} from "../../utils/numberUtils";
-import {generateRandomData} from "../../utils/chartUtils";
+import {round} from "../../../utils/numberUtils";
 
 
-export default function MainMetricsChart() {
+const UptimeChart = (props) => {
+
     const classes = useStyle();
-    const data = generateRandomData();
 
     const tooltipFormatter = (value) => {
         return [round(value, 1) + '%', "Capacity"]
@@ -19,7 +18,7 @@ export default function MainMetricsChart() {
     return (
         <ResponsiveContainer width={'90%'} height={500} className={classes.container}>
             <LineChart
-                data={data}
+                data={props.data}
                 margin={{top: 5, right: 0, left: 0, bottom: 5}}
             >
                 <defs>
@@ -43,13 +42,16 @@ export default function MainMetricsChart() {
                 <Line type="monotone" dataKey="value" stroke="url(#color)" dot={false} strokeWidth={3}/>
             </LineChart>
         </ResponsiveContainer>)
-}
+};
 
 const useStyle = makeStyles(() => ({
     container: {
         marginTop: 20,
     },
 }));
+
+export default UptimeChart;
+
 
 
 
