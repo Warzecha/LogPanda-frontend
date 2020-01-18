@@ -12,7 +12,7 @@ export default function MainMetricsChartContainer(props) {
         case "throughput":
             return <ThroughputChartContainer/>;
         case "latency":
-            return <LatencyChartContainer/>;
+            return <LatencyChartContainer percentiles={props.percentiles}/>;
         case "errors":
             return <ErrorRateChartContainer/>;
 

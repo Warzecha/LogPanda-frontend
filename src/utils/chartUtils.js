@@ -62,3 +62,8 @@ export function generateRandomErrorData() {
 
     return data;
 }
+
+
+export function tooltipLabelFormatter(timestamp) {
+    return moment(timestamp).format('HH:mm')
+};

@@ -18,6 +18,7 @@ const LatencyChart = (props) => {
 
     const tooltipLabelFormatter = (timestamp) => moment(timestamp).format('HH:mm');
 
+
     return (
         <ResponsiveContainer width={'90%'} height={500} className={classes.container}>
             <LineChart
@@ -36,10 +37,14 @@ const LatencyChart = (props) => {
                     labelFormatter={tooltipLabelFormatter}
                 />
                 <CartesianGrid stroke="#f5f5f5"/>
-                <Line type="monotone" dataKey={50} stroke="#3f51b5" dot={false} strokeWidth={3}/>
-                <Line type="monotone" dataKey={90} stroke="#82ca9d" dot={false} strokeWidth={2}/>
-                <Line type="monotone" dataKey={95} stroke="#82ca9d" dot={false} strokeWidth={1}/>
-                <Line type="monotone" dataKey={99} stroke="#82ca9d" dot={false} strokeWidth={1}/>
+                {props.percentiles.get('50').selected &&
+                <Line type="monotone" dataKey={50} stroke="#3f51b5" dot={false} strokeWidth={3}/>}
+                {props.percentiles.get('90').selected &&
+                <Line type="monotone" dataKey={90} stroke="#82ca9d" dot={false} strokeWidth={2}/>}
+                {props.percentiles.get('95').selected &&
+                <Line type="monotone" dataKey={95} stroke="#82ca9d" dot={false} strokeWidth={1}/>}
+                {props.percentiles.get('99').selected &&
+                <Line type="monotone" dataKey={99} stroke="#82ca9d" dot={false} strokeWidth={1}/>}
             </LineChart>
         </ResponsiveContainer>)
 }
