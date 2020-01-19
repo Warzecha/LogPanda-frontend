@@ -2,6 +2,9 @@
   "name": "log-panda-frontend",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "coveragePathIgnorePatterns": ["index.js", "serviceWorker.js"]
+  },
   "homepage": "https://warzecha.github.io/log-panda-frontend/",
   "dependencies": {
     "@date-io/moment": "^1.3.13",
