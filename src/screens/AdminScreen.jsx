@@ -1,8 +1,10 @@
 import React from "react";
 
-export default function AdminScreen() {
-
+const AdminScreen = () => {
     return (<div>
-        Admin Screen
-    </div>)
-}
+            Admin Screen
+        </div>
+    );
+};
+
+export default AdminScreen;

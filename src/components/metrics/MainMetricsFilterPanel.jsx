@@ -15,23 +15,26 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
 
-export default function (props) {
+const MainMetricsFilterPanel = (props) => {
 
     const classes = useStyles();
 
-    const error = props.percentiles.map(item => item.selected).filter(v => v).length < 1;
+    const error = props.percentiles.toIndexedSeq().map(item => item.selected).filter(v => v).length < 1;
 
-    const checkBoxes = props.percentiles.map((item, index) => (<FormControlLabel key={index}
-                                                                                 control={<Checkbox
-                                                                                     checked={item.selected}
-                                                                                     onChange={() => props.onChangePercentile(index)}
-                                                                                     value={item.selected}
-                                                                                     color="primary"
-                                                                                 />}
-                                                                                 label={item.label}
-    />));
+    const checkBoxes = props.percentiles.toIndexedSeq().map((item, index) => {
+
+        // console.log('item', item)
+        return (<FormControlLabel key={index}
+                                  control={<Checkbox
+                                      checked={item.selected}
+                                      onChange={() => props.onChangePercentile(item.value)}
+                                      value={item.selected}
+                                      color="primary"
+                                  />}
+                                  label={item.label}
+        />)
+    });
 
 
     return (
@@ -90,7 +93,7 @@ export default function (props) {
             </ExpansionPanel>
         </div>
     );
-}
+};
 
 
 const useStyles = makeStyles(theme => ({
@@ -133,3 +136,6 @@ const useStyles = makeStyles(theme => ({
         },
     }
 }));
+
+export default MainMetricsFilterPanel;
+

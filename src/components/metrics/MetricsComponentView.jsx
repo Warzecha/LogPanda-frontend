@@ -6,8 +6,7 @@ import useTileStyle from "../../styles/TileStyles";
 import Grid from "@material-ui/core/Grid";
 import {useMediaQuery, useTheme} from "@material-ui/core";
 
-export default function MetricsComponentView(props) {
-
+const MetricsComponentView = (props) => {
     const classes = useTileStyle();
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
@@ -39,16 +38,17 @@ export default function MetricsComponentView(props) {
             </Grid>
 
         </Grid>
-    )
+    );
 
-
-    return(
+    return (
         <div className={classes.root}>
             {isLargeScreen ? largeScreenLayout : smallScreenLayout}
         </div>
     )
 
+};
 
-}
+export default MetricsComponentView;
+
 
 

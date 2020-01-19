@@ -1,7 +1,8 @@
 import React from "react";
-import LogsComponentContainer from "../components/logs/LogsComponentContainer";
+import LogsComponentContainer from "../components/logs/LogsComponentContainer/LogsComponentContainer";
 
-export default function LogsScreen() {
-
+const LogsScreen = () => {
     return <LogsComponentContainer/>
-}
+};
+
+export default LogsScreen;

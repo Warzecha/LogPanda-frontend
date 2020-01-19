@@ -8,8 +8,7 @@ import {round} from "../../utils/numberUtils";
 import useTileStyle from "../../styles/TileStyles";
 
 
-
-export default function UptimeComponent(props) {
+const UptimeComponent = (props) => {
     const classes = useTileStyle();
 
     const {uptime, errorRate, serverErrors} = props;
@@ -17,9 +16,25 @@ export default function UptimeComponent(props) {
     const roundErrorRate = round(errorRate, 2);
     const roundServerErrors = round(serverErrors, 2);
 
+    const formatTime = (value, appendix) => ((value || '') && (value + appendix));
+
+    const calculateTimePeriodInLast24hr = (uptime) => {
+        let totalSeconds = 24 * 60 * 60 * (100 - uptime) / 100;
+
+        let hours = Math.floor(totalSeconds / 3600);
+        let minutes = Math.floor((totalSeconds - (hours * 3600)) / 60);
+        let seconds = round(totalSeconds - (hours * 3600) - (minutes * 60), 0);
+
+        hours = formatTime(hours, 'h');
+        minutes = formatTime(minutes, 'min');
+        seconds = formatTime(seconds, 's');
+
+        return hours + ' ' + minutes + ' ' + seconds;
+    };
+
     const last24h = calculateTimePeriodInLast24hr(uptime);
 
-    return(
+    return (
         <Card className={classes.card}>
             <CardContent>
                 <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
@@ -43,7 +58,6 @@ export default function UptimeComponent(props) {
                 </Typography>
 
 
-
                 <Typography className={classes.sectionTitle} color="textSecondary">
                     of which
                 </Typography>
@@ -62,19 +76,5 @@ export default function UptimeComponent(props) {
     )
 }
 
-const calculateTimePeriodInLast24hr = (uptime) => {
-    let totalSeconds = 24 * 60 * 60 * (100 - uptime) / 100;
 
-    let hours   = Math.floor(totalSeconds / 3600);
-    let minutes = Math.floor((totalSeconds - (hours * 3600)) / 60);
-    let seconds = round(totalSeconds - (hours * 3600) - (minutes * 60), 0);
-
-    hours = formatTime(hours, 'h');
-    minutes = formatTime(minutes, 'min');
-    seconds = formatTime(seconds, 's');
-
-    return hours + ' ' + minutes + ' ' + seconds;
-};
-
-const formatTime = (value, appendix) => ((value || '') && (value + appendix));
-
+export default UptimeComponent;

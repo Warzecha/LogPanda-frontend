@@ -1,45 +1,34 @@
 import React, {useState} from "react";
 import useTileStyle from "../../styles/TileStyles";
-import MainMetricsChart from "./MainMetricsChart";
+import MainMetricsChartContainer from "./charts/MainMetricsChartContainer";
 import Grid from '@material-ui/core/Grid';
 import OutlinedSelectComponent from "./OutlinedSelectComponent";
 import MainMetricsFilterPanel from "./MainMetricsFilterPanel";
 import Button from "@material-ui/core/Button";
 import CardActions from "@material-ui/core/CardActions";
 import Card from "@material-ui/core/Card";
+import {Map} from 'immutable'
 
-export default function MainMetricsComponent(props) {
+const MainMetricsComponent = (props) => {
     const classes = useTileStyle();
 
-    const [metricName, setMetricName] = useState('');
+    const [metricName, setMetricName] = useState('errors');
     const [sourceApp, setSourceApp] = useState('');
 
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
 
-    const [percentiles, setPercentiles] = useState(initialPercentiles);
+    const [percentiles, setPercentiles] = useState(new Map(initialPercentiles));
 
-
-    const handleChangePercentile = index => {
-
-        console.log('index', index);
-
-        const newPercentiles = percentiles.map((item, j) => {
-            if (j === index) {
-                const changed = {...item};
-                changed.selected = !item.selected;
-                return changed
-            } else {
-                return item
-            }
-        });
-        setPercentiles(newPercentiles)
+    const handleChangePercentile = value => {
+        let modified = percentiles.get(value);
+        modified.selected = !modified.selected;
+        setPercentiles(percentiles.set(value, {...modified}))
     };
-
 
     return (
         <Card className={classes.card}>
-            <MainMetricsChart/>
+            <MainMetricsChartContainer chartToShow={metricName} percentiles={percentiles}/>
 
             <Grid container spacing={3}>
                 <Grid item xs={6}>
@@ -79,10 +68,9 @@ export default function MainMetricsComponent(props) {
             </CardActions>
 
 
-
         </Card>
     )
-}
+};
 
 const sourceAppItems = [
     {
@@ -119,27 +107,27 @@ const metricsMenuItems = [
 ];
 
 
-const initialPercentiles = [
-    {
+const initialPercentiles = {
+    "50": {
         label: 'Average',
-        value: 50,
+        value: '50',
         selected: true
     },
-    {
+    "90": {
         label: '90%',
-        value: 90,
+        value: '90',
         selected: true
     },
-    {
+    "95": {
         label: '95%',
-        value: 95,
+        value: '95',
         selected: true
     },
-    {
+    "99": {
         label: '99%',
-        value: 99,
+        value: '99',
         selected: false
     }
+};
 
-];
-
+export default MainMetricsComponent;

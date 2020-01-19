@@ -32,7 +32,7 @@ function ListItemLink(props) {
     );
 }
 
-export default function SideBar(props) {
+const SideBar = (props) => {
     const classes = useMainStyle();
     const theme = useTheme();
     const isSmallDevice = useMediaQuery(theme.breakpoints.down('md'));
@@ -90,8 +90,7 @@ export default function SideBar(props) {
             </Drawer>
         );
     }
-
-}
+};
 
 
 const menuItems = [
@@ -121,3 +120,5 @@ const menuItems = [
         "to": "/admin"
     },
 ];
+
+export default SideBar;

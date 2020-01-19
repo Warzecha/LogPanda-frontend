@@ -3,19 +3,20 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import useMainStyle from "../styles/MainStyles";
+import useMainStyle from "../../styles/MainStyles";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from '@material-ui/icons/Menu';
 import {useMediaQuery, useTheme} from "@material-ui/core";
 
-export default function TopBar(props) {
+
+const TopBar = (props) => {
     const classes = useMainStyle();
 
     const theme = useTheme();
     const isSmallDevice = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
-        <AppBar position="fixed" className={classes.appBar}>
+        <AppBar position="fixed" className={classes.appBar} data-testid="top-bar">
             <Toolbar>
                 {isSmallDevice && <IconButton
                     color="inherit"
@@ -24,7 +25,7 @@ export default function TopBar(props) {
                     onClick={props.onDrawerToggle}
                     className={classes.menuButton}
                 >
-                    <MenuIcon />
+                    <MenuIcon/>
                 </IconButton>}
                 <Typography variant="h6" noWrap>
                     Logs Panda
@@ -32,7 +33,9 @@ export default function TopBar(props) {
             </Toolbar>
         </AppBar>
     );
-}
+};
+
+export default TopBar;
 
 
 

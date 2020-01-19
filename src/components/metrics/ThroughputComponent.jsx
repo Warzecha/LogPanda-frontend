@@ -6,15 +6,14 @@ import Typography from "@material-ui/core/Typography";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import {round} from "../../utils/numberUtils";
-import ThroughputChart from "./ThroughputChart";
+import ThroughputChartContainer from "./charts/throughput/ThroughputChartContainer";
 
 
-
-export default function ThroughputComponent(props) {
+const ThroughputComponent = (props) => {
     const classes = useTileStyle();
     const {currentValue, relativeCapacity} = props;
 
-    return(
+    return (
         <Card className={classes.card}>
             <CardContent>
                 <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
@@ -44,7 +43,7 @@ export default function ThroughputComponent(props) {
                 </div>
 
 
-                <ThroughputChart/>
+                <ThroughputChartContainer/>
 
             </CardContent>
             <CardActions>
@@ -59,10 +58,10 @@ export default function ThroughputComponent(props) {
 const formatThroughput = (value) => {
     if (value < 5000) {
         return value
-    } else if(value < 20000) {
+    } else if (value < 20000) {
         const thousands = value / 1000;
         return round(thousands, 2) + 'k'
-    } else if(value < 1000000) {
+    } else if (value < 1000000) {
         const thousands = value / 1000;
         return round(thousands, 1) + 'k'
     } else {
@@ -70,3 +69,6 @@ const formatThroughput = (value) => {
         return round(millions, 3) + 'M'
     }
 };
+
+export default ThroughputComponent;
+
