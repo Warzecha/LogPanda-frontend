@@ -3,15 +3,30 @@ import useTileStyle from "../../styles/TileStyles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import CardActions from "@material-ui/core/CardActions";
-import Button from "@material-ui/core/Button";
 import {round} from "../../utils/numberUtils";
-import ThroughputChartContainer from "./charts/throughput/ThroughputChartContainer";
 
 
 const ThroughputComponent = (props) => {
     const classes = useTileStyle();
-    const {currentValue, relativeCapacity} = props;
+    const {capacity, currentRpm} = props;
+
+    const relativeCapacity = currentRpm / capacity * 100;
+
+    const formatThroughput = (value) => {
+        if (value < 5000) {
+            return value
+        } else if (value < 20000) {
+            const thousands = value / 1000;
+            return round(thousands, 2) + 'k'
+        } else if (value < 1000000) {
+            const thousands = value / 1000;
+            return round(thousands, 1) + 'k'
+        } else {
+            const millions = value / 1000000;
+            return round(millions, 3) + 'M'
+        }
+    };
+
 
     return (
         <Card className={classes.card}>
@@ -22,7 +37,7 @@ const ThroughputComponent = (props) => {
 
                 <div className={classes.row}>
                     <Typography variant="h5" component="h2">
-                        {formatThroughput(currentValue)}
+                        {formatThroughput(currentRpm)}
                     </Typography>
                     <Typography variant="h5" component="h2" className={classes.appendix} color="textSecondary">
                         {"RPM"}
@@ -42,32 +57,10 @@ const ThroughputComponent = (props) => {
                     </Typography>
                 </div>
 
-
-                <ThroughputChartContainer/>
-
             </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
         </Card>
     )
 
-}
-
-
-const formatThroughput = (value) => {
-    if (value < 5000) {
-        return value
-    } else if (value < 20000) {
-        const thousands = value / 1000;
-        return round(thousands, 2) + 'k'
-    } else if (value < 1000000) {
-        const thousands = value / 1000;
-        return round(thousands, 1) + 'k'
-    } else {
-        const millions = value / 1000000;
-        return round(millions, 3) + 'M'
-    }
 };
 
 export default ThroughputComponent;

@@ -14,19 +14,19 @@ import LogsTableToolbar from "./LogsTableToolbar";
 import LogsTableHead from "./LogsTableHead";
 import LogsFilterDialog from "./LogsFilterDialog";
 import {Error, CheckCircle} from "@material-ui/icons";
-import { green } from '@material-ui/core/colors';
-
+import {green} from '@material-ui/core/colors';
 
 
 export default function (props) {
     const classes = useStyles();
-    const [order, setOrder] = React.useState('asc');
-    const [orderBy, setOrderBy] = React.useState('calories');
+    const [order, setOrder] = React.useState('desc');
+    const [orderBy, setOrderBy] = React.useState('timestamp');
     const [page, setPage] = React.useState(0);
     const [dense, setDense] = React.useState(false);
-    const [rowsPerPage, setRowsPerPage] = React.useState(5);
+    const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
     const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
+
 
     const handleRequestSort = (event, property) => {
         const isDesc = orderBy === property && order === 'desc';
@@ -47,11 +47,36 @@ export default function (props) {
         setDense(event.target.checked);
     };
 
+    const desc = (a, b, orderBy) => {
+        if (b[orderBy] < a[orderBy]) {
+            return -1;
+        }
+        if (b[orderBy] > a[orderBy]) {
+            return 1;
+        }
+        return 0;
+    };
+
+    const stableSort = (array, cmp) => {
+        const stabilizedThis = array.map((el, index) => [el, index]);
+        stabilizedThis.sort((a, b) => {
+            const order = cmp(a[0], b[0]);
+            if (order !== 0) return order;
+            return a[1] - b[1];
+        });
+        return stabilizedThis.map(el => el[0]);
+    };
+
+    const getSorting = (order, orderBy) => {
+        return order === 'desc' ? (a, b) => desc(a, b, orderBy) : (a, b) => -desc(a, b, orderBy);
+    };
+
     const emptyRows = rowsPerPage - Math.min(rowsPerPage, props.logs.length - page * rowsPerPage);
 
     const handleApplyFilters = (filters) => {
         console.log("Applying filters", filters);
-        setIsFilterDialogOpen(false)
+        setIsFilterDialogOpen(false);
+        props.onFiltersApply(filters);
     };
 
     return (
@@ -90,16 +115,18 @@ export default function (props) {
                                         key={index}
                                     >
                                         <TableCell padding="checkbox" align={"center"}>
-                                            {row.statusCode >= 400 ? <Error color={"error"}/> : <CheckCircle style={{ color: green[500] }}/>}
+                                            {row.statusCode >= 400 ? <Error color={"error"}/> :
+                                                <CheckCircle style={{color: green[500]}}/>}
                                         </TableCell>
                                         <TableCell component="th" id={labelId} scope="row" padding="none">
                                             {row.appName}
                                         </TableCell>
-                                        <TableCell align="left">{row.requestPath}</TableCell>
+                                        <TableCell align="left">{row.path}</TableCell>
                                         <TableCell align="left">{row.method}</TableCell>
                                         <TableCell align="left">{row.statusCode}</TableCell>
-                                        <TableCell align="left">{moment(row.requestTimestamp).format("D.MM.YYYY, HH:mm:ss")}</TableCell>
-                                        <TableCell align="left">{row.requestDuration}</TableCell>
+                                        <TableCell
+                                            align="left">{moment(row.timestamp).format("D.MM.YYYY, HH:mm:ss")}</TableCell>
+                                        <TableCell align="left">{row.elapsedTime}</TableCell>
                                     </TableRow>
                                 );
                             })}
@@ -155,28 +182,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-function desc(a, b, orderBy) {
-    if (b[orderBy] < a[orderBy]) {
-        return -1;
-    }
-    if (b[orderBy] > a[orderBy]) {
-        return 1;
-    }
-    return 0;
-}
 
-function stableSort(array, cmp) {
-    const stabilizedThis = array.map((el, index) => [el, index]);
-    stabilizedThis.sort((a, b) => {
-        const order = cmp(a[0], b[0]);
-        if (order !== 0) return order;
-        return a[1] - b[1];
-    });
-    return stabilizedThis.map(el => el[0]);
-}
-
-function getSorting(order, orderBy) {
-    return order === 'desc' ? (a, b) => desc(a, b, orderBy) : (a, b) => -desc(a, b, orderBy);
-}
 
 

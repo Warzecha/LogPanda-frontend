@@ -1,5 +1,5 @@
 import React from "react";
-import LogsComponentContainer from "../components/logs/LogsComponentContainer/LogsComponentContainer";
+import LogsComponentContainer from "../components/logs/LogsComponentContainer";
 
 const LogsScreen = () => {
     return <LogsComponentContainer/>

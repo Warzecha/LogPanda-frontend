@@ -8,6 +8,7 @@ import ErrorsScreen from "../../screens/ErrorsScreen";
 import LogsScreen from "../../screens/LogsScreen";
 import MetricsScreen from "../../screens/MetricsScreen";
 import SettingsScreen from "../../screens/SettingsScreen";
+import {act} from "react-dom/test-utils";
 
 test('Admin Screen renders without crashing', () => {
     const div = document.createElement('div');
@@ -25,14 +26,18 @@ test('Errors Screen renders without crashing', () => {
 
 test('Logs Screen renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<LogsScreen/>, div);
+    act(() => {
+        ReactDOM.render(<LogsScreen/>, div);
+    });
     ReactDOM.unmountComponentAtNode(div)
 });
 
 
 test('Metrics Screen renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<MetricsScreen/>, div);
+    act(() => {
+        ReactDOM.render(<MetricsScreen/>, div);
+    });
     ReactDOM.unmountComponentAtNode(div)
 });
 

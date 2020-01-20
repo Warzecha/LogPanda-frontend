@@ -1,14 +1,20 @@
 import React from 'react';
-import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
+import {ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import moment from "moment";
 import {makeStyles} from "@material-ui/core/styles";
 import BarChart from "recharts/lib/chart/BarChart";
 import Legend from "recharts/lib/component/Legend";
 import Bar from "recharts/lib/cartesian/Bar";
-import {round} from "../../../../utils/numberUtils";
-import {tooltipLabelFormatter} from "../../../../utils/chartUtils";
+import {round} from "../../../utils/numberUtils";
+import {tooltipLabelFormatter} from "../../../utils/chartUtils";
 
 const ErrorRateChart = (props) => {
+
+    const useStyle = makeStyles(() => ({
+        container: {
+            marginTop: 20,
+        },
+    }));
 
     const classes = useStyle();
 
@@ -54,9 +60,9 @@ const ErrorRateChart = (props) => {
                 <XAxis dataKey='timestamp'
                        domain={['auto', 'dataMax']}
                        name='Time'
-                       tickFormatter={(unixTime) => moment(unixTime).format('HH:mm')}
+                       tickFormatter={(unixTime) => moment(unixTime).format('YYYY-MM-DD HH:mm')}
                        type='number'/>
-                <YAxis domain={[0, '100']} name={'Error rate'} unit={'%'} />
+                <YAxis domain={[0, 100.0]} name={'Error rate'} unit={'%'} />
 
                 <Tooltip
                     formatter={tooltipFormatter}
@@ -68,12 +74,8 @@ const ErrorRateChart = (props) => {
                 <Bar dataKey="serverErrorRate" stackId="a" fill='#dd7777'/>
             </BarChart>
         </ResponsiveContainer>)
-}
+};
 
-const useStyle = makeStyles(() => ({
-    container: {
-        marginTop: 20,
-    },
-}));
+
 
 export default ErrorRateChart;

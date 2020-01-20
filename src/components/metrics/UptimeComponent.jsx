@@ -38,21 +38,13 @@ const UptimeComponent = (props) => {
         <Card className={classes.card}>
             <CardContent>
                 <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
-                    Uptime
-                </Typography>
-                <Typography variant="h5" component="h2">
-                    {roundUptime}%
-                </Typography>
-
-
-                <Typography color="textSecondary">
-                    {last24h} during last 24h
-                </Typography>
-
-
-                <Typography className={classes.sectionTitle} color="textSecondary">
                     Error rate
                 </Typography>
+
+                {/*<Typography color="textSecondary">*/}
+                {/*    {last24h} during last 24h*/}
+                {/*</Typography>*/}
+
                 <Typography variant="h5" component="h2">
                     {roundErrorRate}%
                 </Typography>
@@ -69,9 +61,6 @@ const UptimeComponent = (props) => {
                 </Typography>
 
             </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
         </Card>
     )
 }
