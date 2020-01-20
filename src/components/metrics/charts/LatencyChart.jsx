@@ -1,8 +1,8 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import moment from "moment";
 import {makeStyles} from "@material-ui/core/styles";
-import {round} from "../../../../utils/numberUtils";
+import {round} from "../../../utils/numberUtils";
 
 const LatencyChart = (props) => {
 
@@ -21,7 +21,7 @@ const LatencyChart = (props) => {
     const isPercentileSelected = (value) => {
         const percentile = props.percentiles.get(value);
         return percentile && percentile.selected
-    }
+    };
 
     return (
         <ResponsiveContainer width={'90%'} height={500} className={classes.container}>
@@ -42,13 +42,13 @@ const LatencyChart = (props) => {
                 />
                 <CartesianGrid stroke="#f5f5f5"/>
                 {isPercentileSelected('50') &&
-                <Line type="monotone" dataKey={50} stroke="#3f51b5" dot={false} strokeWidth={3}/>}
+                <Line type="monotone" dataKey={'elapsedTime50'} stroke="#3f51b5" dot={false} strokeWidth={3}/>}
                 {isPercentileSelected('90') &&
-                <Line type="monotone" dataKey={90} stroke="#82ca9d" dot={false} strokeWidth={2}/>}
+                <Line type="monotone" dataKey={'elapsedTime90'} stroke="#82ca9d" dot={false} strokeWidth={2}/>}
                 {isPercentileSelected('95') &&
-                <Line type="monotone" dataKey={95} stroke="#82ca9d" dot={false} strokeWidth={1}/>}
+                <Line type="monotone" dataKey={'elapsedTime95'} stroke="#82ca9d" dot={false} strokeWidth={1}/>}
                 {isPercentileSelected('99') &&
-                <Line type="monotone" dataKey={99} stroke="#82ca9d" dot={false} strokeWidth={1}/>}
+                <Line type="monotone" dataKey={'elapsedTime99'} stroke="#82ca9d" dot={false} strokeWidth={1}/>}
             </LineChart>
         </ResponsiveContainer>)
 }

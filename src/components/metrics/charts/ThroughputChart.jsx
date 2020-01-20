@@ -2,7 +2,7 @@ import React from "react";
 import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import moment from "moment";
 import {makeStyles} from "@material-ui/core/styles";
-import {round} from "../../../../utils/numberUtils";
+import {round} from "../../../utils/numberUtils";
 
 const ThroughputChart = (props) => {
 
@@ -18,7 +18,7 @@ const ThroughputChart = (props) => {
 
     return (
         <ResponsiveContainer
-            width={'100%'} height={200}
+            width={'100%'} height={400}
                              className={classes.container}>
             <LineChart
                 data={data}
@@ -36,7 +36,7 @@ const ThroughputChart = (props) => {
                        name='Time'
                        tickFormatter={(unixTime) => moment(unixTime).format('HH:mm')}
                        type='number'/>
-                <YAxis domain={[0, 100]} name={'Capacity'} unit={'%'}/>
+                <YAxis domain={[0, 'auto']} name={'Capacity'} unit={'%'}/>
                 <Tooltip
                     formatter={tooltipFormatter}
                     labelFormatter={tooltipLabelFormatter}
